@@ -1,0 +1,56 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(71, 109, 94);
+}
+
+.navbar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: white;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: rgb(71, 109, 94);
+}
+
+.navbar a:hover {
+  background-color: gray;
+  color: white;
+}
+
+.navbar-icon {
+  display: inline-block;
+  padding: 0px 64px;
+  color: rgb(71, 109, 94);
+}
+
+.card {
+  margin: 16px auto;
+  padding: 16px;
+  width: 80%;
+  /* text-align: center; */
+  border-radius: 4px;
+  background-color: white;
+  color: rgb(71, 109, 94);
+}
+
+.intro {
+  padding: 100px 32px;
+  background-color: lightgray;
+  color: rgb(71, 109, 94);
+}
