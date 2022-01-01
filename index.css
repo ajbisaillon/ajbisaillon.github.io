@@ -1,7 +1,33 @@
-body {
+body, html {
   margin: 0px;
   padding: 0px;
+  height: 100%;  /* for background image above nav */
   background-color: rgb(71, 109, 94);
+}
+
+footer {
+  text-align: center;
+  padding: 28px 0;
+  background-color: white;
+  color: rgb(71, 109, 94);
+}
+
+img {
+  margin: 0.2rem;
+}
+
+.bg {
+  background-image: url("greeting-forest.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro {
+  padding: 100px 32px;
+  background-color: lightgray;
+  color: rgb(71, 109, 94);
 }
 
 .navbar {
@@ -23,7 +49,9 @@ body {
 
 .navbar a {
   display: inline-block;
-  padding: 10px 20px;
+  vertical-align: middle; /* align text in middle of nav vertically */
+  padding: 41px 20px;
+  /* width: 8%; */
   text-decoration: none;
   color: rgb(71, 109, 94);
 }
@@ -35,13 +63,33 @@ body {
 
 .navbar-icon {
   display: inline-block;
-  padding: 0px 64px;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0;
+  padding: 2px;
   color: rgb(71, 109, 94);
+}
+/* #ffead3 - beige/cream color */
+
+@media (max-width: 600px) {
+  .navbar a {
+    float: none;
+    padding: 10px 0;
+    width: 100%;
+  }
+  .navbar-icon {
+    display: none;
+  }
+}
+
+.table {
+  display: table;
+  margin: 0 auto;
 }
 
 .card {
   margin: 16px auto;
-  padding: 16px;
+  padding: 24px;
   width: 80%;
   /* text-align: center; */
   border-radius: 4px;
@@ -49,8 +97,32 @@ body {
   color: rgb(71, 109, 94);
 }
 
-.intro {
-  padding: 100px 32px;
-  background-color: lightgray;
-  color: rgb(71, 109, 94);
+.section-title {
+  /* choose a strong font */
+  padding: 16px;
+  border: 1px solid rgb(71, 109, 94);
+  border-radius: 4px;
+}
+
+.project-title {
+  text-align: center;
+  margin: 32px 16px 0px 16px;
+}
+
+.project-row {
+  display: flex;
+}
+
+.project-left {
+  flex: 70%;
+  margin: 0 10px;
+}
+
+.project-right {
+  flex: 30%;
+  margin: 0 10px;
+}
+
+.contact-card {
+  list-style: none;
 }
