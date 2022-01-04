@@ -12,17 +12,78 @@ footer {
   color: gray;
 }
 
+.footer-statement {
+  margin: 1rem auto; 
+  width: 80%;
+}
+
 img {
   margin: 0.2rem;
 }
 
 .bg {
-  background-image: url("greeting-forest.jpg");
+  background-image: 
+    linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), 
+    url("naseer-unsplash-small.jpg");
+  /* background-image: url("naseer-unsplash.jpg"); */
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.bg span {
+  font-family: monospace;
+  font-size: 2rem;
+  color: white;
+}
+
+@keyframes words {
+  0% {content: "H";}
+  4% {content: "He";}
+  8% {content: "Hel";}
+  12% {content: "Hell";}
+  16% {content: "Hello";}
+  20% {content: "Hello,";}
+  24% {content: "Hello, ";}
+  28% {content: "Hello, m";}
+  32% {content: "Hello, my";}
+  36% {content: "Hello, my ";}
+  40% {content: "Hello, my n";}
+  44% {content: "Hello, my na";}
+  48% {content: "Hello, my nam";}
+  52% {content: "Hello, my name";}
+  56% {content: "Hello, my name ";}
+  60% {content: "Hello, my name i";}
+  64% {content: "Hello, my name is";}
+  68% {content: "Hello, my name is ";}
+  72% {content: "Hello, my name is A";}
+  76% {content: "Hello, my name is Ad";}
+  80% {content: "Hello, my name is Adr";}
+  84% {content: "Hello, my name is Adrie";}
+  88% {content: "Hello, my name is Adrien";}
+  92% {content: "Hello, my name is Adrienn";}
+  96% {content: "Hello, my name is Adrienne";}
+  100% {content: "Hello, my name is Adrienne.";}
+}
+
+@keyframes cursor {
+  0% {content: "";}
+  50% {content: "|";}
+  100% {content: "";}
+}
+.words::before {
+  animation: words 1s linear 0s 1 normal forwards;
+  content: "";
+}
+
+.accessibility {
+  width: 0; 
+  display: inline-block; 
+  overflow: hidden; 
+  white-space: nowrap;
+}
+
 
 .intro {
   padding: 100px 32px;
@@ -98,7 +159,6 @@ img {
 }
 
 .section-title {
-  /* choose a strong font */
   padding: 16px;
   border: 1px solid rgb(71, 109, 94);
   border-radius: 4px;
@@ -114,13 +174,17 @@ img {
 }
 
 .project-left {
-  flex: 70%;
+  flex: 75%;
   margin: 0 10px;
+  /* padding: 0 1rem; */
+  /* border-right: 1px solid lightgray; */
 }
 
 .project-right {
-  flex: 30%;
-  margin: 0 10px;
+  flex: 25%;
+  margin: 16px 10px;
+  padding: 0 1rem;
+  border-left: 1px solid lightgray;
 }
 
 .contact-card {

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>ajbisaillon.dev</title>
   <link rel="stylesheet" href="index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
@@ -15,9 +16,9 @@
   <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="imagesimages32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="imagesimages96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="imagesimages16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="manifest" href="images/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
@@ -26,14 +27,19 @@
 
 <body>
 
-  <div class="bg" id="introduction">
-  </div>
+    <div class="bg" id="introduction">
+      <div style="padding: 4rem;"></div>
+      <div style="margin: 0 1rem; text-align: center;">
+        <span class="words"></span>
+        <span class="letter-changer"></span>
+        <span class="accessibility">Hello</span>
+      </div>
+    </div>
 
   <nav class="navbar">
     <ul>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
-      <!-- <li><h4 class="navbar navbar-icon">AJB</h4></li> -->
       <li><img src="ajb-icon.png" class="navbar-icon" style="width: 96px;"></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -47,14 +53,13 @@
     <h4 class="project-title">Project 1</h4>
     <div class="project-row">
       <div class="project-left">
-        <p><i>Description:</i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
           ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
           ex ea commodo consequat.</p>
       </div>
       
       <div class="project-right">
-        <p><i>Skills used:</i></p>
         <img 
           alt="Python icon"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg" 
@@ -65,13 +70,12 @@
     <h4 class="project-title">Project 2</h4>
     <div class="project-row">
       <div class="project-left">
-        <p><i>Description:</i> Duis aute irure dolor in reprehenderit in voluptate 
+        <p>Duis aute irure dolor in reprehenderit in voluptate 
           velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
       
       <div class="project-right">
-        <p><i>Skills used:</i></p>
         <img 
         alt="JavaScript icon"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" 
@@ -84,18 +88,21 @@
         alt="CSS icon"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
         style="width: 24px; height: 24px;" />
+        <img
+        alt="React icon"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
+        style="width: 24px; height: 24px;" />
       </div>
     </div>
     
     <h4 class="project-title">Project 3</h4>
     <div class="project-row">
       <div class="project-left">
-        <p><i>Description:</i> Itaque earum rerum hic tenetur a sapiente delectus, ut aut 
+        <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut 
           reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
       </div>
       
       <div class="project-right">
-        <p><i>Skills used:</i></p>
         <img
         alt="C language icon"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-plain.svg"
@@ -131,7 +138,7 @@
 
   <footer>
     <div><small>&copy; 2022, Adrienne B. All rights reserved.</small></div>
-    <div style="padding: 0.5rem 10rem;">
+    <div class="footer-statement">
       <small><i>All product names, logos, brands, and trademarks 
       are property of their respective owners. All company, 
       product and service names used in this website are for 
