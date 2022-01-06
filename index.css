@@ -212,8 +212,12 @@ img {
   border-left: 1px solid lightgray;
 }
 
-.exp-title {
+.exp-item {
   margin: 32px 10px 0;
+}
+
+.exp-title {
+  margin: 8px 0;
 }
 
 input, select, textarea {
