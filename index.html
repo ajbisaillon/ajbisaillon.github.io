@@ -50,7 +50,7 @@
   <div class="card" id="projects">
     <h3 class="section-title">Projects</h3>
 
-    <h4 class="project-title">Project 1</h4>
+    <h4 class="project-title"><a href="https://github.com/ajbisaillon">Project 1</a></h4>
     <div class="project-row">
       <div class="project-left">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <h4 class="project-title">Project 2</h4>
+    <h4 class="project-title"><a href="https://github.com/ajbisaillon">Project 2</a></h4>
     <div class="project-row">
       <div class="project-left">
         <p>Duis aute irure dolor in reprehenderit in voluptate 
@@ -95,7 +95,7 @@
       </div>
     </div>
     
-    <h4 class="project-title">Project 3</h4>
+    <h4 class="project-title"><a href="https://github.com/ajbisaillon">Project 3</a></h4>
     <div class="project-row">
       <div class="project-left">
         <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut 
@@ -115,28 +115,80 @@
 
   <div class="card" id="experience">
     <h3 class="section-title">Experience</h3>
+
+    <div class="exp-title">
+      <h4>Title</h4>
+      <h5>Company/Organization</h5>
+      <p>Aliquam purus sit amet luctus venenatis lectus. 
+      Gravida neque convallis a cras semper auctor neque vitae.</p>
+    </div>
+
+    <div class="exp-title">
+      <h4>Title</h4>
+      <h5>Company/Organization</h5>
+      <p>Venenatis cras sed felis eget velit aliquet. 
+        Purus viverra accumsan in nisl nisi scelerisque eu ultrices. 
+        Adipiscing diam donec adipiscing tristique risus nec.</p>
+    </div>
   </div>
 
 
   <div class="card" id="about">
     <h3 class="section-title">About</h3>
+    <div style="margin: 0 10px;">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Pretium quam vulputate dignissim suspendisse in est ante. 
+      </p>
+      <p>
+        Diam maecenas sed enim ut sem viverra. Arcu dictum varius duis 
+        at consectetur lorem donec. Enim nunc faucibus a pellentesque sit amet porttitor eget. 
+        Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Dui nunc 
+        mattis enim ut tellus elementum.
+      </p>
+      <p>
+        Quis hendrerit dolor magna eget est lorem ipsum dolor. 
+        Tortor vitae purus faucibus ornare suspendisse sed. 
+      </p> 
+    </div>
   </div>
 
 
   <div class="card contact-card" id="contact">
     <h3 class="section-title">Contact</h3>
-    <li>
-      <img src="LI-In-Bug-square.png" alt="LinkedIn icon" style="width: 36px; height: 36px;">
-      <a>LinkedIn</a>
-    </li>
-    <li>
-      <img src="GitHub-Mark-120px-plus.png" alt="GitHub icon" style="width: 36px; height: 36px;">
-      <a>GitHub</a>
-    </li>
+    <div style="margin: 0px auto; text-align: center;">
+      <form>
+        <label for="emailaddress">Email:</label><br>
+        <input type="email" id="emailaddress" name="emailaddress"><br>
+        <label for="cars">Subject:</label><br>
+        <select id="subject" name="subject">
+          <option value="general">General</option>
+          <option value="feedback">Feedback</option>
+        </select><br>
+        <label for="message">Message:</label><br>
+        <textarea name="message" style="height:100px;">UNDER CONSTRUCTION: This message won't get sent anywhere just yet.</textarea><br>
+        <input type="submit" class="submit-button"><br>
+      </form>
+    </div>
   </div>
 
 
   <footer>
+    <div class="footer-icons">   
+      <a href="https://github.com/ajbisaillon">
+        <img 
+        alt="GitHub icon"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+        style="width: 24px; height: 24px;" />
+      </a>
+      <a href="https://www.linkedin.com/in/abisaillon/">
+        <img 
+        alt="LinkedIn icon"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg"
+        style="width: 24px; height: 24px;" />
+      </a>
+    </div>
     <div><small>&copy; 2022, Adrienne B. All rights reserved.</small></div>
     <div class="footer-statement">
       <small><i>All product names, logos, brands, and trademarks 
@@ -145,7 +197,7 @@
       identification purposes only. Use of these names, trademarks 
       and brands does not imply endorsement.</i></small>
     </div>
-
+    <!-- TODO: add attributions for icons and photograph -->
   </footer>
 </body>
 

@@ -5,20 +5,30 @@ body, html {
   background-color: rgb(71, 109, 94);
 }
 
+a {
+  text-decoration: none;
+}
+
 footer {
   text-align: center;
-  padding: 28px 0;
+  padding: 1rem 0;
   background-color: white;
   color: gray;
 }
 
 .footer-statement {
-  margin: 1rem auto; 
+  margin: 0.5rem auto;
   width: 80%;
+}
+
+.footer-icons {
+  margin: 0 0.75rem 0.5rem 0;
+  text-align: right;
 }
 
 img {
   margin: 0.2rem;
+  vertical-align: middle;
 }
 
 .bg {
@@ -123,8 +133,8 @@ img {
   display: inline-block;
   vertical-align: middle;
   padding: 41px 20px;
-  /* width: 8%; */
-  text-decoration: none;
+  width: 75px;
+  width: 5rem;
   color: rgb(71, 109, 94);
 }
 
@@ -154,11 +164,6 @@ img {
   }
 }
 
-.table {
-  display: table;
-  margin: 0 auto;
-}
-
 .card {
   margin: 16px auto;
   padding: 24px;
@@ -178,7 +183,15 @@ img {
 
 .project-title {
   text-align: center;
-  margin: 32px 16px 0px 16px;
+  margin: 32px 16px 0px;
+}
+
+.project-title a {
+  color:rgb(71, 109, 94);
+}
+
+.project-title a:hover {
+  color: gray;
 }
 
 .project-row {
@@ -199,6 +212,31 @@ img {
   border-left: 1px solid lightgray;
 }
 
-.contact-card {
-  list-style: none;
+.exp-title {
+  margin: 32px 10px 0;
+}
+
+input, select, textarea {
+  box-sizing: border-box;
+  width: 60%;
+  margin: 4px 16px 16px;
+  padding: 4px;
+  outline: none;
+}
+
+/* input:focus, select:focus, textarea:focus {
+
+} */
+
+.submit-button {
+  width: 20%;
+  padding: 8px 16px;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.submit-button:hover {
+  background-color: rgb(71, 109, 94);
 }
