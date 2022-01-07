@@ -123,6 +123,9 @@ img {
 .navbar ul {
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .navbar li {
@@ -132,16 +135,36 @@ img {
 .navbar a {
   display: inline-block;
   vertical-align: middle;
-  padding: 41px 20px;
-  width: 75px;
-  width: 5rem;
-  color: rgb(71, 109, 94);
+  padding: 4px 0;
+  width: 6.5rem;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.75;
 }
 
 .navbar a:hover {
-  background-color: gray;
-  color: white;
+  opacity: 1;
 }
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover::before {
+  transform: scaleX(1);
+}
+
 
 .navbar-icon {
   display: inline-block;
@@ -153,7 +176,14 @@ img {
 }
 /* #ffead3 - beige/cream color */
 
+
+/* TODO: change to use min-width instead */
+/* FIXME: fix mobile link highlighting */
 @media (max-width: 600px) {
+  .navbar ul {
+    display: block;
+  }
+
   .navbar a {
     float: none;
     padding: 10px 0;
@@ -161,6 +191,10 @@ img {
   }
   .navbar-icon {
     display: none;
+  }
+
+  .navbar a::before {
+    width: 0%;
   }
 }
 
