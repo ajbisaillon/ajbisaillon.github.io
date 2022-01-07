@@ -2,7 +2,7 @@ body, html {
   margin: 0px;
   padding: 0px;
   height: 100%;  /* for background image above nav */
-  background-color: rgb(71, 109, 94);
+  background-color: #476d5e;
 }
 
 a {
@@ -26,6 +26,14 @@ footer {
   text-align: right;
 }
 
+.footer-icons img {
+  opacity: 0.5;
+}
+
+.footer-icons img:hover {
+  opacity: 1;
+}
+
 img {
   margin: 0.2rem;
   vertical-align: middle;
@@ -35,7 +43,6 @@ img {
   background-image: 
     linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), 
     url("naseer-unsplash-small.jpg");
-  /* background-image: url("naseer-unsplash.jpg"); */
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,12 +53,6 @@ img {
   font-family: monospace;
   font-size: 2rem;
   color: white;
-}
-
-.intro {
-  padding: 100px 32px;
-  background-color: lightgray;
-  color: rgb(71, 109, 94);
 }
 
 .navbar {
@@ -80,10 +81,10 @@ img {
   padding: 4px 0;
   width: 6.5rem;
   position: relative;
-  color: #000;
+  color: black;
   text-decoration: none;
   text-transform: uppercase;
-  opacity: 0.75;
+  opacity: 0.5;
 }
 
 .navbar a:hover {
@@ -93,16 +94,15 @@ img {
 .navbar-icon {
   display: inline-block;
   vertical-align: middle;
-  text-align: center;
   margin: 0;
   padding: 2px;
-  color: rgb(71, 109, 94);
 }
 /* #ffead3 - beige/cream color */
 
 
 /* TODO: change to use min-width instead */
 /* FIXME: fix mobile link highlighting */
+/* TODO: improve the appearance of mobile navigation */
 @media (max-width: 600px) {
   .navbar ul {
     display: block;
@@ -121,17 +121,16 @@ img {
   margin: 16px auto;
   padding: 24px;
   width: 80%;
-  /* text-align: center; */
   border-radius: 4px;
   background-color: white;
-  color: #476d5e;
+  color: #29423B;
 }
 
 .section-title {
-  /* needs a strong font */
   padding: 16px;
-  border: 1px solid rgb(71, 109, 94);
-  border-radius: 4px;
+  border-top: 0.5px solid #e9afa3;
+  border-bottom: 0.5px solid #e9afa3;
+  /* border-radius: 8px; */
 }
 
 .project-title {
@@ -140,11 +139,13 @@ img {
 }
 
 .project-title a {
-  color:rgb(71, 109, 94);
+  color: #29423B;
 }
 
+
 .project-title a:hover {
-  color: gray;
+  color: #e9afa3;
+  
 }
 
 .project-row {
