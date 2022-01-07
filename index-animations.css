@@ -1,0 +1,79 @@
+@keyframes words {
+  0% {content: "H";}
+  4% {content: "He";}
+  8% {content: "Hel";}
+  12% {content: "Hell";}
+  16% {content: "Hello";}
+  20% {content: "Hello,";}
+  24% {content: "Hello, ";}
+  28% {content: "Hello, m";}
+  32% {content: "Hello, my";}
+  36% {content: "Hello, my ";}
+  40% {content: "Hello, my n";}
+  44% {content: "Hello, my na";}
+  48% {content: "Hello, my nam";}
+  52% {content: "Hello, my name";}
+  56% {content: "Hello, my name ";}
+  60% {content: "Hello, my name i";}
+  64% {content: "Hello, my name is";}
+  68% {content: "Hello, my name is ";}
+  72% {content: "Hello, my name is A";}
+  76% {content: "Hello, my name is Ad";}
+  80% {content: "Hello, my name is Adr";}
+  84% {content: "Hello, my name is Adrie";}
+  88% {content: "Hello, my name is Adrien";}
+  92% {content: "Hello, my name is Adrienn";}
+  96% {content: "Hello, my name is Adrienne";}
+  100% {content: "Hello, my name is Adrienne.";}
+}
+@keyframes cursor {
+  0% {content: "";}
+  50% {content: "|";}
+  100% {content: "";}
+}
+.words::before {
+  /* name, duration, timing-function, delay, iteration-count, direction, fill-mode */
+  animation: words 2.5s linear 0.1s 1 normal forwards;
+  content: "";
+  animation-iteration-count: 1;
+}
+/* .words::after {
+  animation: cursor 0.6s linear 2.6s 1 normal forwards;
+  content: "|"; 
+} */
+
+.accessibility {
+  width: 0; 
+  display: inline-block; 
+  overflow: hidden; 
+  white-space: nowrap;
+}
+@media (prefers-reduced-motion) {
+  .words::before {
+    content: "Hello, my name is Adrienne."
+  }
+}
+
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover::before {
+  transform: scaleX(1);
+}
+
+@media (max-width: 600px) {
+  .navbar a::before {
+    width: 0%;
+  }
+}
