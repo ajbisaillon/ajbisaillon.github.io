@@ -13,7 +13,7 @@ footer {
   text-align: center;
   padding: 1rem 0;
   background-color: white;
-  color: gray;
+  color: lightgray;
 }
 
 .footer-statement {
@@ -174,10 +174,14 @@ img {
   margin: 8px 0;
 }
 
+form {
+  margin: 8px 64px;
+}
+
 input, select, textarea {
   box-sizing: border-box;
-  width: 60%;
-  margin: 4px 16px 16px;
+  width: 100%;
+  margin: 8px 0 18px 0;
   padding: 4px;
   outline: none;
 }
@@ -197,4 +201,13 @@ input, select, textarea {
 
 .submit-button:hover {
   background-color: rgb(71, 109, 94);
+}
+
+@media (max-width: 600px) {
+  form { 
+    margin: 8px 0;
+  }
+  .submit-button {
+    width: 100%;
+  }
 }

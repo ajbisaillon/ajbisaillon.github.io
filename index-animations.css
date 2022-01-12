@@ -27,20 +27,25 @@
   100% {content: "Hello, my name is Adrienne.";}
 }
 @keyframes cursor {
-  0% {content: "";}
+  0% {content: " ";}
   50% {content: "|";}
-  100% {content: "";}
+  100% {content: " ";}
 }
 .words::before {
   /* name, duration, timing-function, delay, iteration-count, direction, fill-mode */
-  animation: words 2.5s linear 0.1s 1 normal forwards;
+  animation: words 2s linear 0.1s 1 normal forwards;
   content: "";
   animation-iteration-count: 1;
 }
-/* .words::after {
-  animation: cursor 0.6s linear 2.6s 1 normal forwards;
+.words::after {
+  animation: cursor 0.5s linear infinite 1 normal forwards;
   content: "|"; 
-} */
+}
+
+.words::after {
+  animation: cursor 1s linear 2.2s infinite normal forwards;
+  content: "|"
+}
 
 .accessibility {
   width: 0; 

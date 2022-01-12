@@ -29,10 +29,9 @@
 <body>
 
     <div class="bg" id="introduction">
-      <div style="padding: 4rem;"></div>
-      <div style="margin: 0 1rem; text-align: center;">
+      <!-- <div style="padding: 4rem;"></div> -->
+      <div style="display: flex; align-items: center; margin: 0 2rem; height: 100%;">
         <span class="words"></span>
-        <span class="letter-changer"></span>
         <span class="accessibility">Hello, my name is Adrienne</span>
       </div>
     </div>
@@ -41,7 +40,7 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a class="nav-link nav-link-ltr" href="#projects">Projects</a></li>
-      <li><img src="ajb-icon15.png" class="navbar-icon" style="width: 96px;"></li>
+      <li><img src="ajb-icon16.png" class="navbar-icon" style="width: 96px;"></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -158,20 +157,22 @@
 
   <div class="card contact-card" id="contact">
     <h3 class="section-title">Contact</h3>
-    <div style="margin: 0px auto; text-align: center;">
-      <form>
-        <label for="emailaddress">Email:</label><br>
+    <form>
+      <div>
+        <label for="emailaddress"><b>Email</b></label><br>
         <input type="email" id="emailaddress" name="emailaddress"><br>
-        <label for="cars">Subject:</label><br>
+        <label for="subject"><b>Subject</b></label><br>
         <select id="subject" name="subject">
           <option value="general">General</option>
           <option value="feedback">Feedback</option>
         </select><br>
-        <label for="message">Message:</label><br>
+        <label for="message"><b>Message</b></label><br>
         <textarea name="message" style="height:100px;">UNDER CONSTRUCTION: This message won't get sent anywhere just yet.</textarea><br>
-        <input type="submit" class="submit-button"><br>
-      </form>
-    </div>
+        <div style="text-align: center;">
+          <input type="submit" class="submit-button"><br>
+        </div>
+      </div>
+    </form>
   </div>
 
 
@@ -190,7 +191,7 @@
         style="width: 24px; height: 24px;" />
       </a>
     </div>
-    <div><small>&copy; 2022, Adrienne B. All rights reserved.</small></div>
+    <div><small>&copy; 2022 A. Bisaillon. All rights reserved.</small></div>
     <div class="footer-statement">
       <small><i>All product names, logos, brands, and trademarks 
       are property of their respective owners. All company, 
