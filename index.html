@@ -29,7 +29,6 @@
 <body>
 
     <div class="bg" id="introduction">
-      <!-- <div style="padding: 4rem;"></div> -->
       <div style="display: flex; align-items: center; margin: 0 2rem; height: 100%;">
         <span class="words"></span>
         <span class="accessibility">Hello, my name is Adrienne</span>
@@ -157,22 +156,23 @@
 
   <div class="card contact-card" id="contact">
     <h3 class="section-title">Contact</h3>
-    <form>
+    <form id="form" action="https://2bzzpe2b27.execute-api.us-east-1.amazonaws.com/static-site-mailer" method="POST">
       <div>
-        <label for="emailaddress"><b>Email</b></label><br>
-        <input type="email" id="emailaddress" name="emailaddress"><br>
+        <label for="reply_to"><b>Email</b></label><br>
+        <input type="email" id="reply_to" name="reply_to" required><br>
         <label for="subject"><b>Subject</b></label><br>
         <select id="subject" name="subject">
           <option value="general">General</option>
           <option value="feedback">Feedback</option>
         </select><br>
         <label for="message"><b>Message</b></label><br>
-        <textarea name="message" style="height:100px;">UNDER CONSTRUCTION: This message won't get sent anywhere just yet.</textarea><br>
+        <textarea name="message" style="height:100px;" required>UNDER CONSTRUCTION: This message won't get sent anywhere just yet.</textarea><br>
         <div style="text-align: center;">
           <input type="submit" class="submit-button"><br>
         </div>
       </div>
     </form>
+    <p id="js-form-response"></p>
   </div>
 
 
@@ -202,5 +202,5 @@
     <!-- TODO: add attributions for icons and photograph -->
   </footer>
 </body>
-
+<script src="index.js"></script>
 </html>
