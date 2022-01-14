@@ -158,6 +158,8 @@
     <h3 class="section-title">Contact</h3>
     <form id="form" action="https://2bzzpe2b27.execute-api.us-east-1.amazonaws.com/static-site-mailer" method="POST">
       <div>
+        <label for="name"><b>Name</b></label><br>
+        <input type="text" id="name" name="name" required><br>
         <label for="reply_to"><b>Email</b></label><br>
         <input type="email" id="reply_to" name="reply_to" required><br>
         <label for="subject"><b>Subject</b></label><br>
@@ -166,13 +168,13 @@
           <option value="feedback">Feedback</option>
         </select><br>
         <label for="message"><b>Message</b></label><br>
-        <textarea name="message" style="height:100px;" required>UNDER CONSTRUCTION: This message won't get sent anywhere just yet.</textarea><br>
+        <textarea name="message" style="height:100px;" required></textarea><br>
         <div style="text-align: center;">
           <input type="submit" class="submit-button"><br>
         </div>
       </div>
+      <p id="js-form-response" class="center"></p>
     </form>
-    <p id="js-form-response"></p>
   </div>
 
 

@@ -1,3 +1,5 @@
+/* TODO: fix animation on Safari and mobile browsers (and others) */
+
 @keyframes words {
   0% {content: "H";}
   4% {content: "He";}

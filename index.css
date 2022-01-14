@@ -97,8 +97,6 @@ img {
   margin: 0;
   padding: 2px;
 }
-/* #ffead3 - beige/cream color */
-
 
 /* TODO: change to use min-width instead */
 /* FIXME: fix mobile link highlighting */
@@ -142,7 +140,6 @@ img {
   color: #29423B;
 }
 
-
 .project-title a:hover {
   color: #e9afa3;
   
@@ -155,8 +152,6 @@ img {
 .project-left {
   flex: 75%;
   margin: 0 10px;
-  /* padding: 0 1rem; */
-  /* border-right: 1px solid lightgray; */
 }
 
 .project-right {
@@ -188,6 +183,7 @@ input, select, textarea {
   outline: none;
 }
 
+/* TODO: fix input fields focus */
 /* input:focus, select:focus, textarea:focus {
 
 } */
@@ -205,8 +201,6 @@ input, select, textarea {
   background-color: rgb(71, 109, 94);
 }
 
-
-
 @media (max-width: 600px) {
   form { 
     width: 80%;
@@ -221,4 +215,9 @@ input, select, textarea {
     width: 80%;
     max-width: 564px;
   }
+}
+
+.center {
+  width: 100%;
+  margin: 0 auto;
 }
