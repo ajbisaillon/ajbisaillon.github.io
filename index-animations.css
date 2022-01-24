@@ -1,4 +1,4 @@
-/* TODO: fix animation on Safari and mobile browsers (and others) */
+/* FIXME: fix animation on Safari and mobile browsers (and others) */
 
 @keyframes words {
   0% {content: "H";}

@@ -26,10 +26,10 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 
+<!-- TODO: clean up all inline styling -->
 <body>
-
     <div class="bg" id="introduction">
-      <div style="display: flex; align-items: center; margin: 0 2rem; height: 100%;">
+      <div style="display: flex; align-items: center; margin: 0 4rem; height: 100%;">
         <span class="words"></span>
         <span class="accessibility">Hello, my name is Adrienne</span>
       </div>
@@ -50,20 +50,19 @@
     <h3 class="section-title">About</h3>
     <div style="margin: 0 10px;">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Pretium quam vulputate dignissim suspendisse in est ante. 
+        Hi there! I'm glad you decided to visit my website. 
+        My name is Adrienne and I study 
+        <strong>computer science and engineering</strong>
+        at the <strong>University of Connecticut</strong>. 
       </p>
       <p>
-        Diam maecenas sed enim ut sem viverra. Arcu dictum varius duis 
-        at consectetur lorem donec. Enim nunc faucibus a pellentesque sit amet porttitor eget. 
-        Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Dui nunc 
-        mattis enim ut tellus elementum.
+        I plan to pursue a career in <strong>software development</strong>, 
+        and for the last several months I have been cultivating my skills 
+        through projects, challenges, and teaching. My favorite aspect of 
+        working with technology is the need for continuous learning.
+        When I'm not coding, I like to recharge by 
+        exploring nature, practicing yoga, and reading.
       </p>
-      <p>
-        Quis hendrerit dolor magna eget est lorem ipsum dolor. 
-        Tortor vitae purus faucibus ornare suspendisse sed. 
-      </p> 
     </div>
   </div>
 
@@ -71,13 +70,45 @@
   <div class="card" id="projects">
     <h3 class="section-title">Projects</h3>
 
-    <h4 class="project-title"><a href="https://github.com/ajbisaillon">Project 1</a></h4>
+    <h4 class="project-title"><a href="https://github.com/ajbisaillon/ajbisaillon.github.io">Personal Website</a></h4>
     <div class="project-row">
       <div class="project-left">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-          ex ea commodo consequat.</p>
+        <p><em>You are here.</em>
+          This is the first version of my portfolio and 
+          features CSS animations as well as responsive design.
+          The contact form was built using the Serverless Framework
+          in conjunction with AWS Lambda and Simple Email Service.
+        </p>
+      </div>
+      
+      <div class="project-right">
+        <img 
+        alt="HTML icon"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" 
+        style="width: 24px; height: 24px;" />
+        <img
+        alt="CSS icon"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+        style="width: 24px; height: 24px;" />
+        <img 
+        alt="JavaScript icon"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" 
+        style="width: 24px; height: 24px;" />
+        <img
+        alt="AWS icon"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+        style="width: 24px; height: 24px;" />
+
+      </div>
+    </div>
+
+    <h4 class="project-title"><a href="https://github.com/ajbisaillon/ask-anon-discord-bot">Anonymous Questions Bot</a></h4>
+    <div class="project-row">
+      <div class="project-left">
+        <p>Reroutes user messages to a private channel after 
+          removing identifying information. Allows moderators to review questions 
+          before making the content viewable to all members.
+        </p>
       </div>
       
       <div class="project-right">
@@ -87,20 +118,17 @@
           style="width: 24px; height: 24px;" />
       </div>
     </div>
-
-    <h4 class="project-title"><a href="https://github.com/ajbisaillon">Project 2</a></h4>
+    
+    <h4 class="project-title"><a href="https://github.com/ajbisaillon">Daily Tracker Web App</a></h4>
     <div class="project-row">
       <div class="project-left">
-        <p>Duis aute irure dolor in reprehenderit in voluptate 
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>A simple browser-based productivity tool that combines a todo list 
+          with a timer, streamlining the ability to track how much time is spent 
+          on specific tasks.
+        </p>
       </div>
       
       <div class="project-right">
-        <img 
-        alt="JavaScript icon"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" 
-        style="width: 24px; height: 24px;" />
         <img 
         alt="HTML icon"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" 
@@ -109,24 +137,13 @@
         alt="CSS icon"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
         style="width: 24px; height: 24px;" />
+        <img 
+        alt="JavaScript icon"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" 
+        style="width: 24px; height: 24px;" />
         <img
         alt="React icon"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
-        style="width: 24px; height: 24px;" />
-      </div>
-    </div>
-    
-    <h4 class="project-title"><a href="https://github.com/ajbisaillon">Project 3</a></h4>
-    <div class="project-row">
-      <div class="project-left">
-        <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut 
-          reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-      </div>
-      
-      <div class="project-right">
-        <img
-        alt="C language icon"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-plain.svg"
         style="width: 24px; height: 24px;" />
       </div>
     </div>
@@ -136,21 +153,37 @@
 
   <div class="card" id="experience">
     <h3 class="section-title">Experience</h3>
+    <p><i>More details on my work experience coming soon... <br> 
+      For now, here's a summary of my most relevant classes.</i></p>
 
     <div class="exp-item">
-      <h4 class="exp-title">Title</h4>
-      <h5 class="exp-title">Company/Organization</h5>
-      <p>Aliquam purus sit amet luctus venenatis lectus. 
-      Gravida neque convallis a cras semper auctor neque vitae.</p>
+      <h4 class="exp-title">Current</h4>
+      <ul style="margin: 0 0 16px 0;">
+        <li>Principles of Programming [<em>Teaching Assistant</em>]</li>
+        <li>Introduction to Software Engineering</li>
+        <li>C++ Essentials</li>
+        <li>Computer Architecture</li>
+        <li>Programming Languages</li>
+      </ul>
+
+      <h4 class="exp-title">Previous</h4>
+      <ul style="margin: 0 0 16px 0;">
+        <li>Algorithms and Complexity</li>
+        <li>System Programming</li>
+        <li>Data Structures and Object Oriented Design</li>
+        <li>Electrical Circuits</li>
+        <li>Digital Logic Design</li>
+        <li>Discrete Systems</li>
+      </ul>
     </div>
 
-    <div class="exp-item">
+    <!-- <div class="exp-item">
       <h4 class="exp-title">Title</h4>
       <h5 class="exp-title">Company/Organization</h5>
       <p>Venenatis cras sed felis eget velit aliquet. 
         Purus viverra accumsan in nisl nisi scelerisque eu ultrices. 
         Adipiscing diam donec adipiscing tristique risus nec.</p>
-    </div>
+    </div> -->
   </div>
 
 

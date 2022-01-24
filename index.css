@@ -1,7 +1,7 @@
 body, html {
   margin: 0px;
   padding: 0px;
-  height: 100%;  /* for background image above nav */
+  height: 100%;  /* for background image above navigation */
   background-color: #476d5e;
 }
 
@@ -183,7 +183,7 @@ input, select, textarea {
   outline: none;
 }
 
-/* TODO: fix input fields focus */
+/* TODO: add input fields focus */
 /* input:focus, select:focus, textarea:focus {
 
 } */
@@ -199,6 +199,7 @@ input, select, textarea {
 
 .submit-button:hover {
   background-color: rgb(71, 109, 94);
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
