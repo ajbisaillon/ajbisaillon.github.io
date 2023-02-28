@@ -23,32 +23,38 @@
     ></script>
   </head>
 
-  <body>
-    <div class="center main-content">
+  <body style="visibility: hidden">
+    <div class="center main-content fade-in">
       <div>
         <h1>Adrienne Bisaillon</h1>
         <h2>Software Engineer</h2>
         <div class="divider"></div>
-        <p>
-          "But I must explain to you how all this mistaken idea of denouncing
-          pleasure and praising pain was born and I will give you a complete
-          account of the system, and expound the actual teachings of the great
-          explorer of the truth, the master-builder of human happiness. No one
-          rejects, dislikes, or avoids pleasure itself, because it is pleasure,
-          but because those who do not know how to pursue pleasure rationally
-          encounter consequences that are extremely painful."
-        </p>
+        <p>Coming soon!</p>
       </div>
 
       <div>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-github"></i>
+        <a href="https://www.linkedin.com/in/abisaillon/">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/ajbisaillon">
+          <i class="fa-brands fa-github"></i>
+        </a>
+
         <i class="fa-regular fa-paper-plane"></i>
       </div>
     </div>
   </body>
+  <script>
+    let domReady = (show) => {
+      document.readyState === "complete"
+        ? show()
+        : document.addEventListener("DOMContentLoaded", show);
+    };
+
+    domReady(() => {
+      document.body.style.visibility = "visible";
+    });
+  </script>
 </html>
 
-<!-- TODO: add links to contact buttons -->
-<!-- TODO: fade in while loading -->
 <!-- TODO: email form -->

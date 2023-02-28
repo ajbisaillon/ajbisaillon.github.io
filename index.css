@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -12,27 +13,33 @@ h1 {
   color: rgb(37, 50, 59);
   margin: 0px auto;
   padding: 2em 1em 0.25em;
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   /* font-size: 72px; */
   font-size: 3.5em;
   letter-spacing: 10px;
 }
 
-h2  {
+h2 {
   color: rgb(37, 50, 59, 0.7);
   padding: 0.25em 1em 1em;
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-size: 1.5em;
 }
 
 p {
   color: rgb(37, 50, 59, 0.7);
   padding: 1.5em 2.5em;
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  border: none;
 }
 
 /* font awesome icons */
-.fa-regular, .fa-brands {
+.fa-regular,
+.fa-brands {
   color: rgb(189, 183, 187);
   margin: 0.25em;
   padding: 0.75em;
@@ -40,11 +47,12 @@ p {
   width: 25px;
   text-align: center;
   text-decoration: none;
-  border: 1px solid rgb(189, 183, 187);;
+  border: 1px solid rgb(189, 183, 187);
   border-radius: 50%;
 }
 
-.fa-regular:hover, .fa-brands:hover {
+.fa-regular:hover,
+.fa-brands:hover {
   color: rgb(37, 50, 59, 0.9);
   border: 1px solid rgb(37, 50, 59, 0.9);
 }
@@ -64,7 +72,12 @@ p {
   box-sizing: border-box;
   border-left: 3px solid;
   border-right: 3px solid;
-  border-image: linear-gradient(rgb(37, 50, 59, 0.9), 25%, rgb(255, 255, 255, 0.9)) 1;
+  border-image: linear-gradient(
+      rgb(37, 50, 59, 0.9),
+      25%,
+      rgb(255, 255, 255, 0.9)
+    )
+    1;
 }
 
 .divider {
@@ -75,4 +88,17 @@ p {
 
 .links {
   margin: 0.5em auto;
+}
+
+.fade-in {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
