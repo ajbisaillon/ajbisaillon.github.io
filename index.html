@@ -45,13 +45,7 @@
     </div>
   </body>
   <script>
-    let domReady = (show) => {
-      document.readyState === "complete"
-        ? show()
-        : document.addEventListener("DOMContentLoaded", show);
-    };
-
-    domReady(() => {
+    window.addEventListener("load", () => {
       document.body.style.visibility = "visible";
     });
   </script>

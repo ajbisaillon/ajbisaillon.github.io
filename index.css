@@ -86,12 +86,8 @@ a {
   border-top: 1px solid rgb(37, 50, 59, 0.4);
 }
 
-.links {
-  margin: 0.5em auto;
-}
-
 .fade-in {
-  animation: fadeIn 3s;
+  animation: fadeIn ease 3s;
 }
 
 @keyframes fadeIn {
