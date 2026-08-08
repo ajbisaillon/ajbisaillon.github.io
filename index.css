@@ -65,7 +65,8 @@ a {
 
 /* font awesome icons */
 .fa-regular,
-.fa-brands {
+.fa-brands,
+.fa-solid {
   color: rgb(189, 183, 187);
   margin: 0.25em;
   padding: 0.6em;
@@ -78,7 +79,8 @@ a {
 }
 
 .fa-regular:hover,
-.fa-brands:hover {
+.fa-brands:hover,
+.fa-solid:hover {
   color: rgb(37, 50, 59, 0.9);
   border: 1px solid rgb(37, 50, 59, 0.9);
 }
@@ -106,8 +108,8 @@ a {
 }
 
 .divider {
-  margin: auto;
-  width: 60%;
+  margin: 2.5em auto 0;
+  width: 40%;
   border-top: 1px solid rgb(37, 50, 59, 0.4);
 }
 
