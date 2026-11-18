@@ -1,127 +1,320 @@
-body,
-html {
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
-  background-image: url("images/griesbeck-unsplash.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+:root {
+  --accent: #f2dfa8;
+  --text: #eee8f7;
+  --muted: #c4bedf;
+  --star: #f4eeff;
+  --sparkle: #fff8e6;
 }
 
-h1 {
-  color: rgb(37, 50, 59);
-  margin: 0px auto;
-  padding: 1.25em 0.75em 0.25em;
-  font-family: "Bebas Neue", cursive;
-  font-size: 3.5em;
-  letter-spacing: 10px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-h2, h3 {
-  color: rgb(37, 50, 59, 0.7);
-  font-family: "Inconsolata", monospace;
-}
-
-h2 {
-  padding: 0em 1em 0em;
-  font-size: 1.5em;
-}
-
-h4 {
+html,
+body {
   margin: 0;
-  padding: 1em 1em 0.75em 2em;
-  color: rgb(37, 50, 59, 0.7);
-  font-family: "Prompt", sans-serif;
+  min-height: 100%;
 }
 
-p {
-  color: rgb(37, 50, 59, 0.7);
-  padding: 0 1em;
-  font-family: "Prompt", sans-serif;
+body {
+  background: #1e1934;
+  color: var(--text);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
 }
 
 a {
-  text-decoration: none;
-  border: none;
+  color: var(--text);
 }
 
-.icons-container {
-  padding: 1em;
-  margin-bottom: 1em;
+/* ---------- Sky ---------- */
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 96px 0 170px;
+  background: linear-gradient(
+    180deg,
+    #1e1934 0%,
+    #2c2247 30%,
+    #43305e 55%,
+    #5e4272 72%,
+    #9c7286 84%,
+    #d9ae97 94%,
+    #ebc4a2 100%
+  );
 }
 
-/* devicon icons */
-.devicon {
-  font-size: 36px;
-  padding: 0.25em;
-  color: rgb(37, 50, 59, 0.9);
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
-.devicon:hover {
-  color: rgb(9, 58, 93);
-  cursor: pointer;
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--star);
+  opacity: var(--o, 1);
 }
 
-/* font awesome icons */
-.fa-regular,
-.fa-brands,
-.fa-solid {
-  color: rgb(189, 183, 187);
-  margin: 0.25em;
-  padding: 0.6em;
-  font-size: 25px;
-  width: 25px;
-  text-align: center;
-  text-decoration: none;
-  border: 1px solid rgb(189, 183, 187);
-  border-radius: 50%;
+.star--lg {
+  width: 3px;
+  height: 3px;
 }
 
-.fa-regular:hover,
-.fa-brands:hover,
-.fa-solid:hover {
-  color: rgb(37, 50, 59, 0.9);
-  border: 1px solid rgb(37, 50, 59, 0.9);
+.star--cross {
+  width: 10px;
+  height: 10px;
+  background: none;
 }
 
-.center {
-  text-align: center;
-  margin: 0px auto;
+.star--cross::before,
+.star--cross::after {
+  content: "";
+  position: absolute;
+  background: var(--sparkle);
 }
 
-.main-content {
-  height: 100%;
-  width: 50%;
-  min-width: 400px;
-  max-width: 600px;
-  background-color: rgb(255, 255, 255, 0.9);
-  box-sizing: border-box;
-  border-left: 3px solid;
-  border-right: 3px solid;
-  border-image: linear-gradient(
-      rgb(37, 50, 59, 0.9),
-      25%,
-      rgb(255, 255, 255, 0.9)
-    )
-    1;
+.star--cross::before {
+  left: 0;
+  top: 4px;
+  width: 10px;
+  height: 2px;
 }
 
-.divider {
-  margin: 2.5em auto 0;
-  width: 40%;
-  border-top: 1px solid rgb(37, 50, 59, 0.4);
+.star--cross::after {
+  left: 4px;
+  top: 0;
+  width: 2px;
+  height: 10px;
 }
 
-.fade-in {
-  animation: fadeIn ease 3s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0.5;
-  }
+@keyframes twinkle {
+  0%,
   100% {
+    opacity: var(--o, 1);
+  }
+  50% {
+    opacity: calc(var(--o, 1) * 0.2);
+  }
+}
+
+.tw1 {
+  animation: twinkle 3.4s steps(4) infinite;
+}
+
+.tw2 {
+  animation: twinkle 4.8s steps(4) 1.3s infinite;
+}
+
+.tw3 {
+  animation: twinkle 6.2s steps(4) 2.6s infinite;
+}
+
+.hill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 110px;
+  fill: #1b1530;
+}
+
+/* ---------- Content ---------- */
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 71rem;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5.6vw, 72px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  animation: fade-in 1.2s ease both;
+}
+
+.intro {
+  flex: 1 1 26.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.prompt {
+  margin: 0;
+  font-size: 1.0625rem;
+  color: var(--muted);
+}
+
+.prompt > span:first-child {
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-weight: inherit;
+}
+
+.first {
+  font-size: clamp(3.25rem, 6vw, 4.75rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.85em;
+  margin-left: 0.13em;
+  vertical-align: -0.06em;
+  background: var(--accent);
+}
+
+.surname {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #d6d0ea;
+}
+
+.role {
+  margin: 0.5rem 0 0;
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  color: #dcd6ee;
+}
+
+/* ---------- Links window ---------- */
+
+.terminal {
+  flex: 0 1 27.5rem;
+  padding: 1.125rem 1.25rem 1.25rem;
+  border: 1px solid #4a3d6b;
+  border-radius: 10px;
+  background: rgba(27, 22, 48, 0.72);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  font-size: 1rem;
+}
+
+.terminal .prompt {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.terminal .prompt--end {
+  margin: 0.5rem 0 0;
+}
+
+.terminal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.link.is-active {
+  background: rgba(255, 248, 230, 0.1);
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.arrow {
+  color: var(--accent);
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+
+.idle-cursor {
+  display: inline-block;
+  width: 0.5625em;
+  height: 1.0625em;
+  vertical-align: -0.1875em;
+  background: var(--muted);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
+  }
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 51.25rem) {
+  .page {
+    align-items: flex-start;
+    padding-top: 72px;
+  }
+
+  .terminal {
+    flex: 1 1 100%;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .tw1,
+  .tw2,
+  .tw3,
+  .container {
+    animation: none;
   }
 }

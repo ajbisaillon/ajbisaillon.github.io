@@ -1,57 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>A J Bisaillon</title>
-    <link rel="stylesheet" href="index.css" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-    />
+    <meta charset="utf-8" />
+    <title>Adrienne Bisaillon | Software Engineer</title>
+    <meta name="description" content="Adrienne Bisaillon, software engineer. Find me on LinkedIn, GitHub, and Credly." />
+    <link rel="canonical" href="https://www.ajb.codes/" />
 
-    <!-- fonts -->
+    <!-- link previews (LinkedIn, Slack, iMessage, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.ajb.codes/" />
+    <meta property="og:site_name" content="Adrienne Bisaillon" />
+    <meta property="og:title" content="Adrienne Bisaillon | Software Engineer" />
+    <meta property="og:description" content="Software engineer. Find me on LinkedIn, GitHub, and Credly." />
+    <meta property="og:image" content="https://www.ajb.codes/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A pixel-art AB monogram under a starry dusk sky." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta name="theme-color" content="#1E1934" />
+
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@200;300&family=Prompt:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;800&display=swap"
       rel="stylesheet"
     />
-
-    <!-- icons -->
-    <link
-      rel="stylesheet"
-      type='text/css'
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/238a71e136.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="index.css" />
   </head>
 
-  <body style="visibility: hidden">
-    <div class="center main-content fade-in">
-      <div>
-        <h1>Adrienne Bisaillon</h1>
-        <h2>Software Engineer</h2>
-        <h3>3 YOE</h3>
+  <body>
+    <div class="page">
+      <div class="stars" aria-hidden="true"></div>
 
-      <div class="divider"></div>
-      <div class="icons-container">
-        <a href="https://www.linkedin.com/in/ajbisaillon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-        </a>
-        <a href="https://github.com/ajbisaillon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="fa-brands fa-github" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.credly.com/users/ajbisaillon/badges/credly" target="_blank" rel="noopener noreferrer" aria-label="Credly badges">
-          <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-        </a>
-      </div>
+      <svg class="hill" aria-hidden="true" viewBox="0 0 1280 110" preserveAspectRatio="none">
+        <path d="M0,32 C180,14 360,2 560,22 C760,42 920,50 1080,28 C1180,15 1240,10 1280,14 L1280,110 L0,110 Z" />
+      </svg>
+
+      <main class="container">
+        <section class="intro">
+          <p class="prompt" aria-hidden="true" data-avoid><span>$</span> whoami</p>
+          <h1>
+            <span class="first" data-avoid>adrienne<span class="cursor" aria-hidden="true"></span></span>
+            <span class="surname" data-avoid>Bisaillon</span>
+          </h1>
+          <p class="role" data-avoid>Software Engineer · <span id="yoe">3</span> YOE</p>
+        </section>
+
+        <nav class="terminal" aria-label="Links">
+          <p class="prompt" aria-hidden="true"><span>$</span> ls ~/links</p>
+          <ul>
+            <li>
+              <a class="link is-active" href="https://www.linkedin.com/in/ajbisaillon/" target="_blank" rel="noopener noreferrer">
+                <span><span class="arrow" aria-hidden="true">→</span> linkedin</span>
+                <span class="note">work history <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></span>
+              </a>
+            </li>
+            <li>
+              <a class="link" href="https://github.com/ajbisaillon" target="_blank" rel="noopener noreferrer">
+                <span><span class="arrow" aria-hidden="true">→</span> github</span>
+                <span class="note">code <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></span>
+              </a>
+            </li>
+            <li>
+              <a class="link" href="https://www.credly.com/users/ajbisaillon/badges/credly" target="_blank" rel="noopener noreferrer">
+                <span><span class="arrow" aria-hidden="true">→</span> credly</span>
+                <span class="note">certifications <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></span>
+              </a>
+            </li>
+          </ul>
+          <p class="prompt prompt--end" aria-hidden="true"><span>$</span> <span class="idle-cursor"></span></p>
+        </nav>
+      </main>
     </div>
+
+    <script>
+      // Years of experience => whole years since June 2023 (falls back to the static number without JS).
+      (() => {
+        const start = { year: 2023, month: 5 }; // month is 0-based
+        const now = new Date();
+        let years = now.getFullYear() - start.year;
+        if (now.getMonth() < start.month) years -= 1;
+        document.getElementById("yoe").textContent = Math.max(years, 0);
+      })();
+
+      // Highlight follows the mouse (and keyboard focus); stays on the last one.
+      const links = document.querySelectorAll(".link");
+      links.forEach((link) => {
+        const activate = () => {
+          links.forEach((l) => l.classList.remove("is-active"));
+          link.classList.add("is-active");
+        };
+        link.addEventListener("mouseenter", activate);
+        link.addEventListener("focus", activate);
+      });
+
+      // Pixel stars, spread across the whole sky but not obscuring text.
+      const page = document.querySelector(".page");
+      const sky = document.querySelector(".stars");
+
+      function seeded(seed) {
+        return () => {
+          seed |= 0;
+          seed = (seed + 0x6d2b79f5) | 0;
+          let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+          t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+      }
+
+      function drawStars() {
+        const box = page.getBoundingClientRect();
+        const w = box.width;
+        const h = box.height;
+        const pad = 12;
+        // Use the tight boxes around the actual text, not the (often full-width) containers.
+        const avoid = [];
+        document.querySelectorAll("[data-avoid]").forEach((el) => {
+          const range = document.createRange();
+          range.selectNodeContents(el);
+          for (const r of range.getClientRects()) {
+            if (!r.width || !r.height) continue;
+            avoid.push({
+              left: r.left - box.left - pad,
+              top: r.top - box.top - pad,
+              right: r.right - box.left + pad,
+              bottom: r.bottom - box.top + pad,
+            });
+          }
+        });
+        const blocked = (x, y, size) =>
+          avoid.some((a) => x + size > a.left && x < a.right && y + size > a.top && y < a.bottom);
+
+        const rand = seeded(7);
+        const target = Math.round((w * h) / 13000);
+        const frag = document.createDocumentFragment();
+        let placed = 0;
+
+        for (let i = 0; i < target * 4 && placed < target; i++) {
+          const roll = rand();
+          const kind = roll < 0.07 ? "cross" : roll < 0.25 ? "lg" : "sm";
+          const size = kind === "cross" ? 10 : kind === "lg" ? 3 : 2;
+          const x = Math.round(rand() * (w - size));
+          const y = Math.round(rand() * (h * 0.86));
+          const twinkle = rand();
+          if (blocked(x, y, size)) continue;
+
+          const star = document.createElement("span");
+          star.className = "star star--" + kind;
+          if (twinkle < 0.22) star.classList.add("tw1");
+          else if (twinkle < 0.44) star.classList.add("tw2");
+          else if (twinkle < 0.66) star.classList.add("tw3");
+          // dimmer toward the horizon
+          const fade = 1 - (y / h) * 0.6;
+          star.style.setProperty("--o", (0.55 + rand() * 0.45) * fade);
+          star.style.left = x + "px";
+          star.style.top = y + "px";
+          frag.appendChild(star);
+          placed++;
+        }
+        sky.replaceChildren(frag);
+      }
+
+      // Redraw whenever the layout changes (window resize, font load, text-size changes).
+      let resizeTimer;
+      const scheduleDraw = () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(drawStars, 150);
+      };
+      window.addEventListener("resize", scheduleDraw);
+      if ("ResizeObserver" in window) {
+        new ResizeObserver(scheduleDraw).observe(document.querySelector(".container"));
+      }
+      (document.fonts ? document.fonts.ready : Promise.resolve()).then(drawStars);
+    </script>
   </body>
-  <script>
-    window.addEventListener("load", () => {
-      document.body.style.visibility = "visible";
-    });
-  </script>
 </html>

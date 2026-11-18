@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E1934"/>
+      <stop offset="0.45" stop-color="#3B2A55"/>
+      <stop offset="0.75" stop-color="#6E4E7A"/>
+      <stop offset="1" stop-color="#D9AE97"/>
+    </linearGradient>
+    <clipPath id="tile"><rect width="32" height="32" rx="7"/></clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="32" height="32" fill="url(#sky)"/>
+    <g fill="#FFF8E6">
+      <rect x="5" y="9" width="8" height="2"/>
+      <rect x="3" y="11" width="4" height="2"/>
+      <rect x="11" y="11" width="4" height="2"/>
+      <rect x="3" y="13" width="4" height="2"/>
+      <rect x="11" y="13" width="4" height="2"/>
+      <rect x="3" y="15" width="12" height="2"/>
+      <rect x="3" y="17" width="4" height="2"/>
+      <rect x="11" y="17" width="4" height="2"/>
+      <rect x="3" y="19" width="4" height="2"/>
+      <rect x="11" y="19" width="4" height="2"/>
+      <rect x="3" y="21" width="4" height="2"/>
+      <rect x="11" y="21" width="4" height="2"/>
+      <rect x="17" y="9" width="10" height="2"/>
+      <rect x="17" y="11" width="4" height="2"/>
+      <rect x="25" y="11" width="4" height="2"/>
+      <rect x="17" y="13" width="4" height="2"/>
+      <rect x="25" y="13" width="4" height="2"/>
+      <rect x="17" y="15" width="10" height="2"/>
+      <rect x="17" y="17" width="4" height="2"/>
+      <rect x="25" y="17" width="4" height="2"/>
+      <rect x="17" y="19" width="4" height="2"/>
+      <rect x="25" y="19" width="4" height="2"/>
+      <rect x="17" y="21" width="10" height="2"/>
+    </g>
+  </g>
+</svg>
